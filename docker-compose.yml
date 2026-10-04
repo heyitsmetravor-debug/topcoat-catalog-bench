@@ -1,0 +1,10 @@
+services:
+  catalog:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3000"
+      CATALOG_MB: ${CATALOG_MB:-1024}
+    mem_limit: 3g
